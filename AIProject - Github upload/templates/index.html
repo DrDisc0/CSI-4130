@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Email Rewriter & Summarizer</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>AI Email Rewriter & Summarizer</h1>
+    
+    <textarea id="emailInput" placeholder="Paste or write your email here..."></textarea>
+
+    <div class="controls">
+      <label for="toneSelect">Choose a tone:</label>
+      <select id="toneSelect">
+        <option value="professional">Professional</option>
+        <option value="friendly">Friendly</option>
+        <option value="concise">Concise</option>
+        <option value="apologetic">Apologetic</option>
+      </select>
+    </div>
+
+    <div class="buttons">
+      <button onclick="rewriteEmail()">Rewrite Email</button>
+      <button onclick="summarizeEmail()">Summarize Email</button>
+    </div>
+
+    <div id="outputContainer">
+      <h2>Result:</h2>
+      <!-- Changed id to match our CSS and JS -->
+      <pre id="result"></pre>
+    </div>
+  </div>
+
+  <script>
+    async function rewriteEmail() {
+      const emailText = document.getElementById("emailInput").value;
+      const tone = document.getElementById("toneSelect").value;
+
+      const response = await fetch("/rewrite", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email_text: emailText, tone: tone })
+      });
+
+      const data = await response.json();
+      document.getElementById("result").textContent = data.rewritten_text;
+    }
+
+    async function summarizeEmail() {
+      const emailText = document.getElementById("emailInput").value;
+
+      const response = await fetch("/summarize", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email_text: emailText })
+      });
+
+      const data = await response.json();
+      document.getElementById("result").textContent = data.summary;
+    }
+
+    // 🧠 Auto-expand + scroll hybrid behavior
+    const resultBox = document.getElementById("result");
+
+    const observer = new MutationObserver(() => {
+      requestAnimationFrame(() => {
+        resultBox.style.opacity = "1";
+        resultBox.style.height = "auto";
+        const newHeight = resultBox.scrollHeight;
+
+        if (newHeight > 500) {
+          resultBox.style.height = "500px";
+          resultBox.style.overflowY = "auto";
+        } else {
+          resultBox.style.height = newHeight + "px";
+          resultBox.style.overflowY = "hidden";
+        }
+      });
+    });
+
+    observer.observe(resultBox, {
+      childList: true,
+      characterData: true,
+      subtree: true
+    });
+  </script>
+</body>
+</html>
