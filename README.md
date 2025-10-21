@@ -120,6 +120,4 @@ Copy code
 ---
 
 
-It will render *beautifully* on GitHub — headers are consistent, code blocks display correctly, and everything is properly separated.
 
-Would you like me to add your actual screenshot into it (so it shows up on your GitHub page)? I can write the correct line for your image once you tell me the filename or location of the screenshot (e.g., `static/demo.png`)
