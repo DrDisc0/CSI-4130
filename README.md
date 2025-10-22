@@ -6,31 +6,30 @@
 ---
 
 ## 🧠 Overview
-The **AI Email Rewriter & Summarizer** is a Flask-based web app that uses modern **Generative AI** to help users quickly rewrite or summarize emails for improved **clarity**, **tone**, and **professionalism**.  
+The **AI Email Rewriter & Summarizer** is a Flask-based web application that uses **Google’s Gemini 2.5 AI model** to help users rewrite and summarize emails for improved **clarity**, **tone**, and **professionalism**.  
 
-This project demonstrates the integration of **Large Language Models (LLMs)** through the **OpenRouter API**, providing a real-world example of how AI can enhance digital communication.  
+This project demonstrates the real-world use of **Large Language Models (LLMs)** to enhance everyday communication and productivity through simple natural language interaction.
 
 ---
 
 ## 🚀 Features
-✅ Rewrite emails in different tones (Professional, Friendly, Concise, Apologetic)  
-✅ Summarize long emails into short, clear summaries  
-✅ Automatically formatted, easy-to-read interface  
-✅ Responsive design with expanding result box  
-✅ Built with Flask, HTML, CSS, and JavaScript  
+✅ Rewrite emails in various tones (Professional, Friendly, Concise, Apologetic)  
+✅ Summarize long emails into short, focused summaries  
+✅ Clean, responsive user interface  
+✅ Expanding output box for readable results  
+✅ 100% free and powered by **Google’s Gemini API**  
 
 ---
 
 ## 🗂️ Project Structure
 AIProject/
 │
-├── app.py # Flask backend
+├── app.py # Flask backend logic
 ├── requirements.txt # Dependencies
-├── .env.example # Example environment file (no real API key)
 ├── templates/
 │ └── index.html # Frontend HTML
 ├── static/
-│ └── style.css # Styling
+│ └── style.css # Styling and layout
 └── README.md # Project documentation
 
 yaml
@@ -55,69 +54,46 @@ source venv/bin/activate  # On macOS/Linux
 bash
 Copy code
 pip install -r requirements.txt
-4️⃣ Create a .env File
-Create a new file named .env in the root folder and add:
-
-ini
-Copy code
-OPENROUTER_API_KEY=sk-or-v1-your_key_here
-OPENROUTER_API_BASE=https://openrouter.ai/api/v1
-(You can get your key at https://openrouter.ai/keys)
-
-🧩 How to Use the App
-1️⃣ Run the Flask app:
-
+4️⃣ Run the App
 bash
 Copy code
 python app.py
-2️⃣ Open your browser and go to:
+5️⃣ Open in Browser
+Visit:
 
 cpp
 Copy code
 http://127.0.0.1:5000
-3️⃣ Paste or write an email in the textbox.
-4️⃣ Select a tone (Professional, Friendly, etc.).
-5️⃣ Click Rewrite Email or Summarize Email.
-6️⃣ Your result will appear below with clean formatting.
+Then:
+
+Paste or type your email.
+
+Choose a tone (Professional, Friendly, etc.).
+
+Click Rewrite Email or Summarize Email.
+
+View your improved or summarized email below.
 
 🧱 Technologies Used
-Python (Flask)
+Python (Flask) — Backend web framework
 
-HTML5 / CSS3 / JavaScript
+HTML / CSS / JavaScript — Frontend and interactivity
 
-OpenRouter API (LLM integration)
-
-dotenv for environment variables
-
-🔒 Security Notes
-Never upload your .env file to GitHub — it contains your private API key.
-
-This project includes a .env.example file for demonstration only.
-
-Add .env to your .gitignore to keep your credentials safe.
-
-🧾 Example
-Here’s what the app looks like in action:
-(Insert screenshot here — for example:)
+Google Gemini 2.5 API — AI model for rewriting and summarization
 
 🧑‍💻 Future Improvements
-Add export option (PDF or TXT)
+Add grammar and tone analysis tools
 
-Add grammar-checking and tone analysis
+Support exporting results (PDF, TXT, or email draft)
 
-Deploy to a live web host for demo
+Optional Chrome/Outlook plugin integration
+
+Add Gemini “Pro” mode toggle for higher-quality responses
 
 🏁 Conclusion
-This project showcases how Generative AI can be used to improve communication clarity and tone.
-It combines user-friendly design with powerful AI backends to deliver a functional, real-world productivity tool.
+This project showcases how Generative AI can enhance real-world communication through natural language processing.
+By integrating Gemini 2.5, the app delivers intelligent, context-aware rewriting and summarization with a simple and elegant interface.
 
 📜 License
-This project is open source and free to use for educational purposes.
-
-pgsql
-Copy code
-
----
-
-
-
+Open source and free for educational use.
+Developed by Collin Follett for CSI-4130/5130: Artificial Intelligence.
