@@ -8,7 +8,7 @@
 ## 🧠 Overview
 The **AI Email Rewriter & Summarizer** is a Flask-based web application that uses **Google’s Gemini 2.5 AI model** to help users rewrite and summarize emails for improved **clarity**, **tone**, and **professionalism**.  
 
-This project demonstrates the real-world use of **Large Language Models (LLMs)** to enhance everyday communication and productivity through simple natural language interaction.
+This project demonstrates the real-world use of **Large Language Models (LLMs)** to enhance everyday communication and productivity through simple natural language interaction.  
 
 ---
 
