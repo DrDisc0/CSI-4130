@@ -1,11 +1,11 @@
-# ✉️ AI Email Rewriter & Summarizer
+# AI Email Rewriter & Summarizer
 **Author:** Collin Follett  
 **Course:** CSI-4130/5130 — Artificial Intelligence  
 **Project Theme:** AI in the Era of Generative Models  
 
 ---
 
-## 🧠 Overview
+## Overview
 The **AI Email Rewriter & Summarizer** is a Flask-based web app powered by **Google’s Gemini 2.5 AI model**.  
 It helps users rewrite or summarize emails with improved **clarity**, **tone**, and **professionalism**.  
 
@@ -13,7 +13,7 @@ This project demonstrates practical use of **Large Language Models (LLMs)** for 
 
 ---
 
-## 🚀 Features
+## Features
 - ✅ Rewrite emails in various tones (Professional, Friendly, Concise, Apologetic)  
 - ✅ Summarize long emails into short, focused summaries  
 - ✅ Clean, responsive UI with auto-expanding result box  
@@ -36,7 +36,7 @@ AIProject/
 
 ---
 
-## ⚙️ Setup Instructions
+## Setup Instructions
 
 ### 1️⃣ Clone the Repository
 ```bash
@@ -73,14 +73,14 @@ Then:
 
 ---
 
-## 🧱 Technologies Used
+## Technologies Used
 - **Python (Flask)** — Backend web framework  
 - **HTML / CSS / JavaScript** — Frontend and interactivity  
 - **Google Gemini 2.5 API** — AI model for rewriting and summarization  
 
 ---
 
-## 🧑‍💻 Future Improvements
+## Future Improvements
 - Add grammar and tone analysis tools  
 - Support exporting results (PDF / TXT / email draft)  
 - Optional Chrome / Outlook plugin integration  
@@ -88,12 +88,12 @@ Then:
 
 ---
 
-## 🏁 Conclusion
+## Conclusion
 This project shows how **Generative AI** can enhance real-world communication through natural-language processing.  
 By integrating **Gemini 2.5**, the app provides intelligent, context-aware rewriting and summarization with a simple, elegant interface.  
 
 ---
 
-## 📜 License
+## License
 Open source and free for educational use.  
 Developed by **Collin Follett** for **CSI-4130/5130: Artificial Intelligence**.
